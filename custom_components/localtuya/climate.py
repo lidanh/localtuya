@@ -64,6 +64,17 @@ from .const import (
 _LOGGER = logging.getLogger(__name__)
 
 HVAC_MODE_SETS = {
+    "Auto/Cool/Heat/Dry/Fan": {
+        HVACMode.AUTO: "Auto",
+        HVACMode.COOL: "cooling",
+        HVACMode.HEAT: "heating",
+        HVACMode.DRY: "dehum",
+        HVACMode.FAN_ONLY: "fan"
+    },
+    "hot/cold": {
+        HVACMode.HEAT: "hot",
+        HVACMode.COOL: "cold",
+    },
     "manual/auto": {
         HVACMode.HEAT: "manual",
         HVACMode.AUTO: "auto",
@@ -96,6 +107,12 @@ HVAC_MODE_SETS = {
     },
 }
 HVAC_ACTION_SETS = {
+    "Cool/Heat/Dry/Fan": {
+        HVACAction.COOLING: "cooling",
+        HVACAction.HEATING: "heating",
+        HVACAction.DRYING: "dehum",
+        HVACAction.FAN: "fan"
+    },
     "True/False": {
         HVACAction.HEATING: True,
         HVACAction.IDLE: False,
@@ -120,6 +137,12 @@ HVAC_FAN_MODE_SETS = {
         FAN_MEDIUM: "middle",
         FAN_HIGH: "high",
         FAN_TOP: "strong",
+    },
+    "Low/Middle/High/Auto": {
+        FAN_AUTO: "auto",
+        FAN_LOW: "low",
+        FAN_MEDIUM: "middle",
+        FAN_HIGH: "high",
     }
 }
 HVAC_SWING_MODE_SETS = {
